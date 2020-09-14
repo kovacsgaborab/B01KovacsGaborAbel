@@ -33,6 +33,10 @@ namespace B01KovácsGáborÁbel
             }
 
             Console.WriteLine("5 osztható de 4 nem oszthatóak száma: {0}", db);
+
+            StreamWriter sw = new StreamWriter("egyediek.txt", true);
+            sw.WriteLine(db);
+            sw.Close();
         }
 
         private static void Minimumertek()
@@ -55,13 +59,13 @@ namespace B01KovácsGáborÁbel
         {
             StreamReader sr = new StreamReader("adatok.dat");
 
-            string[] atmeneti= sr.ReadLine().Split(' '); ;
+            string[] atmeneti= sr.ReadLine().Split(' ');
 
             while (!sr.EndOfStream)
             {
                 for (int i = 0; i < adat.Length; i++)
                 {
-                    adat[0] = int.Parse(atmeneti[0]) * 3;
+                    adat[i] = int.Parse(atmeneti[i])*3;
                 }
             }
             sr.Close();
