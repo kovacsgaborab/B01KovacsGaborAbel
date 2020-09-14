@@ -20,7 +20,20 @@ namespace B01KovácsGáborÁbel
             Console.ReadKey();
         }
 
+        private static void Egyediek()
+        {
+            int db = 0;
 
+            for (int i = 0; i < adat.Length; i++)
+            {
+                if (adat[i] % 5 == 0 && adat[i] % 4 != 0)
+                {
+                    db = db + 1;
+                }
+            }
+
+            Console.WriteLine("5 osztható de 4 nem oszthatóak száma: {0}", db);
+        }
 
         private static void Minimumertek()
         {
