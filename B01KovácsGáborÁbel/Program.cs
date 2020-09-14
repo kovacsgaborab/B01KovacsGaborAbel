@@ -22,6 +22,22 @@ namespace B01KovácsGáborÁbel
 
 
 
+        private static void Minimumertek()
+        {
+            int min = 1000;
+
+            for (int i = 0; i < adat.Length; i++)
+            {
+                if (adat[i] < min)
+                {
+                    min = adat[i];
+                }
+            }
+
+            Console.WriteLine("A minimum: {0}", min);
+
+        }
+
         private static void Beolvas()
         {
             StreamReader sr = new StreamReader("adatok.dat");
